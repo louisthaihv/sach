@@ -1,0 +1,95 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#banner {
+	background-color: #009933;
+	height: 120px;
+	width: 100%;
+	margin-bottom:7px;
+	
+}
+
+#menu {
+	background-color: #CCCCCC;
+	float:left;
+	height:auto;
+	width: 12%;
+}
+
+#content {
+	padding-left:6px;
+	float: right;
+	height: auto;
+	width: 87%;
+}
+
+#footer {
+	margin-top:8px;
+	background: #009933;
+	height: 120px;
+	width: 100%;
+}
+
+div.xoa {
+	clear:both;
+}
+
+div#box-chucnang {
+	width:auto;
+	height:75px;
+	padding:5px;
+	text-align:center;
+}
+
+
+div#box-chucnang:hover {
+	border:2px solid #9999FF;
+}
+
+div#menu a {
+	text-decoration:none;
+	color:#000000;
+}
+
+div#menu a:hover {
+	color:#CC0033;
+}
+
+div.left {
+	float:left;
+	padding-left:10px;
+	padding-top:10px;
+	
+}
+div.right {
+	float:right;
+	padding-right:10px;
+	padding-top:10px;
+
+}
+
+#custom {
+	border-collapse:collapse;
+	
+}
+#custom tr {
+	border:2px solid #F66;
+	border-radius: 20px;
+	
+}
+#custom td {
+	padding:5px;
+}
+#custom tr.doimaunen{
+	background-color:#99CC00;
+}
+#custom tr.doimau{
+	background-color:#C03;
+}
