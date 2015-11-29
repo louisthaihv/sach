@@ -1,12 +1,15 @@
 <div class="top">
-          <div class="languages">
-          <div>languages</div>
-            <a href="#"><img src="images/en.gif" alt=" english"/></a>
-            <a href="#"><img src="images/vietnam.gif" alt=" vn"/></a>
-          </div>
+          
         <div class="search">
-        	<div class="search-text"><a href="#">TÌM KIẾM SÁCH</a></div> 
-            <input type="text" class="search-input" name="search" />
-            <img src="images/search.gif" class="search-bt" />
+        	<div class="search-text"><a ><strong>TÌM KIẾM SÁCH</strong></a></div> 
+       <form name="formnhap" method="post" action="">
+         <select class="search-select" name="select">
+           <option value="tensach" />Tên sách
+           <option value="tentacgia" />Tên tác giả
+           <option value="gia" />Đơn giá
+         </select>
+          <input type="text" class="search-input" name="key"  placeholder="  Nhập từ khóa tìm kiếm..." id="key"/>
+         <input type="submit" value=""  class="sm" name="submit"/>         
+       </form>
         </div>
 </div>

@@ -4,7 +4,7 @@
 	float:left;
 	}
 .title-box{
-	width:196px;
+	width:195px;
 	height:30px;
 	background:url(../images/menu_title_bg.gif) no-repeat center;
 	margin:5px 0 0 0;
@@ -21,39 +21,39 @@ ul.left-menu{
     width:196px;
 }
 ul.left-menu li,ul.left-menu li a{ 
-    border-bottom:1px solid #fbfbfb;
-    height:32px;
+    border-top:1px solid #fbfbfb;
+    height:auto;
     position:relative;
-	width:166px;
-	height:25px;
+	width:165px;
 	display:block;	
 	text-decoration:none;
-	color:#000;
+	color:#066;
 	line-height:25px;
 	font-size:13px;
 	background-position:5px 5px;
 	
+	
 }
 ul.left-menu li a{
 	background:url(../images/checked.png) no-repeat left #CCC;
-	padding: 0 0 0 30px;
+	padding-left: 30px;
 }
 ul.left-menu li:hover,ul.left-menu li a:hover{
     display:block;
-    background:#fbfbfb;
-    color: red;
+    background:#EBEBEB;
+    color:#C00;
 }
 ul.left-menu li > ul.left-menu{
     position:absolute;
-    top:0px; 
-    left:200px;
+    top:-1px; 
+    left:196px;
     display:none;
 }
 ul.left-menu li:hover > ul.left-menu{
     display:block;
 }
 .boder-box{
-	width:194px;
+	width:193px;
 	height:auto;
 	text-align:center;
 	border:1px solid #0033FF;

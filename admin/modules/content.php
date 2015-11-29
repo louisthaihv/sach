@@ -10,29 +10,25 @@
 		
 			$tam = "";
 		}
-		if($tam == "baiviet") {
+		if($tam == "sach") {
 		
-			include("modules/baiviet/main.php");
+			include("modules/sach/main.php");
 			
-		} else if($tam == "benh") {
+		} else if($tam == "danhmuc") {
 			
-			include("modules/benh/main.php");
+			include("modules/danhmuc/main.php");
 			
-		}else if($tam == "caythuoc") {
+		}else if($tam == "tuychinh") {
 			
-			include("modules/caythuoc/main.php");
-			
-		}else if($tam == "log") {
-			
-			include("modules/log/main.php");
-			
-		}else if($tam == "tacdung") {
-			
-			include("modules/tacdung/main.php");
+			include("modules/tuychinh/main.php");
 			
 		}else if($tam == "quyen") {
 			
 			include("modules/quyen/main.php");
+			
+		}else if($tam == "donhang") {
+			
+			include("modules/donhang/main.php");
 			
 		}else if($tam == "nguoidung") {
 			

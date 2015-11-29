@@ -3,9 +3,9 @@
 	include("modules/editor/editor1.php");
 	
 ?>
-<form action="modules/nguoidung/xuly.php" method="post" >
+<form action="modules/nguoidung/xuly.php?role_id=<?php echo $_GET['role_id'] ?>&" method="post" >
 	<div class="left" style="padding-left:30px; margin-top:10px">	
-		<table width="1019" height="278" border="0">
+		<table width="1019" height="239" border="0">
 		  <tr>
 			<td height="37" colspan="5"><div align="center" style="color:#CC0033"><strong>CHỨC NĂNG THÊM MỚI NGƯỜI DÙNG</strong></div></td>
 		  </tr>
@@ -29,7 +29,7 @@
 				
 				$sql = "
 							SELECT	*
-							FROM	quyen
+							FROM	tbl_role
 						";
 				$quyen = mysql_query($sql);
 			?>
@@ -37,7 +37,7 @@
 		        <?php
 			 	while($row_quyen = mysql_fetch_array($quyen)) {
 			 ?>
-		        <option value="<?php echo $row_quyen["maQuyen"] ?>"><?php echo $row_quyen["tenQuyen"] ?></option>
+		        <option value="<?php echo $row_quyen["role_id"] ?>"><?php echo $row_quyen["role_name"] ?></option>
 		        <?php
 				}
 			 ?>
@@ -46,17 +46,11 @@
 			<td><input name="noio" type="text" id="noio" /></td>
 		  </tr>
 		  <tr>
-		    <td height="43"><strong>Ngày đăng ký:</strong></td>
-		    <td colspan="2"><input type="date" name="ngaydangky" id="ngaydangky" /></td>
-		    <td><strong>Trạng thái:</strong></td>
-		    <td><select name="trangthai" id="trangthai">
+		    <td height="43"><strong>Trạng thái:</strong></td>
+		    <td colspan="2"><select name="trangthai" id="trangthai">
 		      <option value="1" selected="selected">1</option>
 		      <option value="0">0</option>
-		      </select></td>
-		  </tr>
-		  <tr>
-		    <td height="43">&nbsp;</td>
-		    <td colspan="2">&nbsp;</td>
+	        </select></td>
 		    <td><strong>Ghi chú:</strong></td>
 		    <td><input type="text" name="ghichu" id="ghichu" /></td>
 	      </tr>

@@ -1,10 +1,10 @@
 <?php
 
 	$ac = $_GET['ac'];
-	if($ac == "them") {
+	if($ac == "lietke") {
 	
 		include("modules/quyen/them.php");
-	} else {
+	} else if($ac == "sua"){
 		include("modules/quyen/sua.php");
 	}
 	

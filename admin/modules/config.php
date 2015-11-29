@@ -10,4 +10,5 @@
 		exit;
 	}
 	mysql_select_db($csdl,$con);
+	mysql_query("SET NAMES 'UTF8'");
 ?>

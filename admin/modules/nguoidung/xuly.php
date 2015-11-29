@@ -1,53 +1,46 @@
 <?php
 	
 	include("../config.php");
-	$manguoidung = $_POST["manguoidung"];
 	$tendangnhap = $_POST["tendangnhap"];
-	$matkhau = md5($_POST["matkhau"]);
+	$matkhau = ($_POST["matkhau"]);
 	$hoten = $_POST["hoten"];
 	$email = $_POST["email"];
 	$noio = $_POST["noio"];
 	$maquyen = $_POST["maquyen"];
 	$trangthai = $_POST["trangthai"];
-	$ngaydangky = $_POST["ngaydangky"];
 	$ghichu = $_POST["ghichu"];
-	$id = $_GET["id"];
-	
+	$id = $_GET["id"];	
 	
 	if(isset($_POST["them"])) {
-		//thuc hien them du lieu
-	
+		//thuc hien them du lieu	
 		$sql =	"	
-					INSERT INTO	`sach`.`tbl_user` (user_id, user_name ,user_password ,ho_ten ,email, noi_o, role_id, trang_thai, user_regdate, ghi_chu)
-					VALUES		('$manguoidung', '$tendangnhap','$matkhau','$hoten', '$email', '$noio', '$maquyen', '$trangthai', '$ngaydangky', '$ghichu')
-				  ";
-				
+					INSERT INTO	`sach`.`tbl_user` (user_name ,user_password ,user_fullname ,user_email, user_address, role_id, user_status, user_regdate, user_note)
+					VALUES		('$tendangnhap','$matkhau','$hoten', '$email', '$noio', '$maquyen', '$trangthai', NOW(), '$ghichu')
+				  ";				
 		mysql_query($sql);
 		
-		header("location: ../../index.php?quanly=nguoidung&ac=them");
+		header("location: ../../index.php?role_id=".$_GET['role_id']."&quanly=nguoidung&ac=lietke");
 		
 	}else if(isset($_POST["sua"])) {
 		
 		//thuc hien sua
 		$sql =	"	 
 				  UPDATE  `sach`.`tbl_user` 
-				  SET `user_name` =   '$tendangnhap',`user_password` =  '$matkhau',`hoten` =  '$hoten',`email` =  '$email',`noi_o` =  '$noio',`role_id` =   '$maquyen', `trang_thai` = '$trangthai', `user_regdate` =  '$ngaydangky',`ghi_chu` =  '$ghichu' 
+				  SET `user_name` =   '$tendangnhap',`user_password` =  '$matkhau',`user_fullname` =  '$hoten',`user_email` =  '$email',`user_address` =  '$noio',`role_id` =   '$maquyen', `user_status` = '$trangthai', `user_note` =  '$ghichu' 
 				  WHERE  `tbl_user`.`user_id` ='$id' 
-				   ";
-				
+				   ";				
 		mysql_query($sql);
 		
-		header("location: ../../index.php?quanly=nguoidung&ac=sua&id=".$id);
+		header("location: ../../index.php?role_id=".$_GET['role_id']."&quanly=nguoidung&&ac=lietke");
 		
 	}else{
 		//thuc hien xoa
-		//printf($id);
 		$sql =	"	
 					DELETE FROM		tbl_user 
 					WHERE			user_id = '$id'
 				  ";
 		mysql_query($sql);
-		header("location: ../../index.php?quanly=nguoidung&ac=them");
+		header("location: ../../index.php?role_id=".$_GET['role_id']."&quanly=nguoidung&ac=lietke");
 	}
 
 ?>

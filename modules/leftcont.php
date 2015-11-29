@@ -13,7 +13,7 @@
 		  
 		  while($row_category = mysql_fetch_array($category)) {
 		?>
-     	<li><a href="#"><?php echo $row_category["cat_name"] ?></a>
+     	<li><strong><a ><?php echo $row_category["cat_name"] ?></a></strong>
           <ul class="left-menu">
               <?php				
                 $sql2 = "
@@ -25,7 +25,7 @@
                 
                 while($row_category2 = mysql_fetch_array($category2)) {
               ?>
-                      <li><a href="index.php?ac=category&cat_name=<?php echo $row_category2['cat_name'] ?>&cat_id=<?php echo $row_category2['cat_id'] ?>"><?php echo $row_category2["cat_name"] ?></a></li>
+                      <li><strong><a href="index.php?ac=category&cat_name=<?php echo $row_category2['cat_name'] ?>&cat_id=<?php echo $row_category2['cat_id'] ?>"><?php echo $row_category2["cat_name"] ?></a></strong></li>
               <?php
                 
                  }
@@ -45,12 +45,13 @@
  <div class="title-box">Specials Product</div>
    <div class="boder-box">
    <?php $dong = mysql_fetch_array($product)?>
-      <div class="product-title"><a href="index.php?xem=product&cat_id=<?php echo $dong['cat_id'] ?>&pd_id=<?php echo $dong['pd_id'] ?>"><?php echo $dong['pd_name'] ?></a></div>
-      <div class="product-img"><img src="images/<?php echo $dong['pd_image'] ?>"  alt="bac-ho"></div>
+      <div class="product-title"><a href="index.php?ac=product&cat_id=<?php echo $dong['cat_id'] ?>&pd_id=<?php echo $dong['pd_id'] ?>"><?php echo $dong['pd_name'] ?></div>
+      <div class="product-img"><img width="140" height="200" src="images/<?php echo $dong['pd_image'] ?>"  alt="bac-ho"></div>
       <div class="product-price" >
       <span class="reduce"></span>
-      <span class="price"><?php echo $dong['pd_price'] ?></span>
+      <span class="price"><?php echo $dong['pd_price']." VND" ?></span>
       </div>
+      </a>
    </div>
    
  <?php /*?><div class="title-box">Yeu cau</div>

@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if($_SESSION["tendangnhap"] == "") {
+		header("location: ../index.php?ac=login");
+		exit();
+	}
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -5,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/confirm.js"></script>
 	<body>
 	
 		<?php

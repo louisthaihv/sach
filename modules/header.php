@@ -1,8 +1,9 @@
+
 <div class="header">
       	<div id="logo"><img src="images/bookstore.png" alt="image"/></div>
         <div class="slider" >
         	<div class="top-divider"><img src="images/header_divider.png" alt="image"/></div>
-            <div class="slide-content" >
+            <!--<div class="slide-content" >
             	<div class="content">
                 	<img src="images/naruto%201.jpg" height="110" alt="image" class="slide-img"/>
                     <div class="slide-details" >
@@ -22,8 +23,23 @@
                 <a href="#">5</a>
                 </div>
             
-            </div>
+            </div>-->
+            <div class="slide-holder">
+              <div class="slide-pager">
+                  <div class="slide-control-prev">«</div>
+                  <div class="slide-control-next">»</div>
+              </div>
+              <div class="slide-container">
+                  <div class="slide-stage">
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                  </div>
+              </div>
+          </div>            
             <div class="top-divider"><img src="images/header_divider.png" alt="image"/></div>
         </div>
-      
-      </div>
+</div>

@@ -5,9 +5,9 @@
          </div>
          
          <div class="center-footer">
-         	Template name. All Rights Reserved 2008 <br />
+         	Thông tin cửa hàng <br />
             <a href="#"><img src="images/csscreme.jpg" alt="image" /></a><br />
-            <a href="#"><img src="images/payment.gif" alt="payment" /></a><br />
+            <a href="https://www.nganluong.vn/"><img src="images/nganluong.png" alt="payment" /></a><br />
          </div>
          
          <div class="right-footer">

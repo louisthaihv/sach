@@ -1,14 +1,17 @@
 /* CSS Document */
+.required{
+	color:red;
+}
 .center-content{
 	width:585px;
 	float:left;
 	padding:5px 10px 0 0 ;
 	}
 .center-title-bar{
-	width:520px;
+	width:540px;
 	height:33px;
 	float:left;
-	background:url(../images/bar_bg.gif) no-repeat center;
+	background:url(../images/bar_bg.png) no-repeat center;
 	padding:0 0 0 40px;
 	line-height:33px;
 	margin: 0 0 0 12px;
@@ -18,8 +21,8 @@
 .prod-box{
 	width:173px;
 	float:left;
-	height:auto;
-	padding:10px 10px 10px 11px;
+	height:310px;
+	padding:10px 0px 10px 21px;
 	}
 .top-prod-box{
 	width:173px;

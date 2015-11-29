@@ -12,6 +12,8 @@
 <body>
 <?php
 	$pd_id = $_GET['pd_id'];
+	// session id 
+	$sid = session_id();
 	if ($pd_id != "")
 	{
 		include("config.php");
@@ -24,14 +26,23 @@
 			if (isset ($_SESSION['giohang'][$pd_id]))
 			{
 				//tang so luong len 1
-				$_SESSION['giohang'][$pd_id]++;
+				$_SESSION['giohang'][$pd_id]++;	
+				
+				$sql = "UPDATE tbl_cart 
+		        SET ct_qty = ct_qty + 1
+				WHERE ct_session_id = '$sid' AND pd_id = $pd_id";	
+				$result = mysql_query($sql);		
 			}
 			else //neu sach nay chua co trong gio hang
 			{
 				$_SESSION['giohang'][$pd_id] = 1;
+				
+				$sql = "INSERT INTO tbl_cart (pd_id, ct_qty, ct_session_id, ct_date)
+				VALUES ($pd_id, 1, '$sid', NOW())";
+				$result = mysql_query($sql);
 			}
 			//mo trang gio hang
-			header("location:miniCart.php");
+			header("location:cart.php");
 		}
 		else
 		{

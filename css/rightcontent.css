@@ -1,14 +1,27 @@
 /* CSS Document */
 .right-content{
 	width:196px;
-	float:left;
+	float:right;
 	padding-top:5px;
 	}
-.shopping-cart{
+/*.shopping-cart{
 	width:195px;
 	height:84px;
 	text-align:center;
 	background:url(../images/cart_bg.gif) no-repeat center;
+	}*/
+.shopping-cart{
+	width:195px;
+	height:auto;
+	text-align:center;
+	background-color:#CCC;
+	border-radius:10px;
+	}
+.new{
+	padding-top: 1px;
+	height:auto;
+	text-align:center;
+	background-color:#FFF;
 	}
 .cart-title{
 	font-size:12px;
@@ -30,5 +43,12 @@ span.boder-cart{
 	height:1px;
 	display:block;
 	margin:3px 0;
-	border-top:1px #CCCCCC dashed;
+	border-top:1px #009999 dashed;
 	}
+span.boder-top-cart{
+	width:auto;
+	height:1px;
+	display:block;
+	margin:3px 0;
+	border-top:2px  #FFFFFF double;
+}

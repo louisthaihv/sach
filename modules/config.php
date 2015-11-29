@@ -4,7 +4,6 @@
 	$matkhau = "root";
 	$csdl = "sach";//ten csdl
 	
-
 	@$con = mysql_connect($tenmaychu,$taikhoan,$matkhau);
 	if(!$con) {
 		echo "khong ket not duoc csdl";

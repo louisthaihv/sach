@@ -1,7 +1,7 @@
 /* CSS Document */
 .product_img_big{
 	width: 170px;
-	padding: 5px 0 5px 10px;
+	padding: 15px 0px 15px 10px;
 	float: left;
 }
 
@@ -14,7 +14,7 @@
 .details_big_box {
 	width: 354px;
 	float: left;
-	padding: 0 0 0 15px;
+	padding: 10px  0 0 15px;
 	text-align: left;
 }
 
@@ -28,31 +28,39 @@
 .specifications{
 	font-size: 12px;
 	font-weight: bold;
-	line-height: 18px;
+	line-height: 20px;
+	margin-right:10px;
 }
-
+.description {
+	margin:5px 10px 20px 30px;
+	font-size: 18px;
+	line-height: 20px;
+	text-align:justify;
+	font-family:"Times New Roman", Times, serif;
+}
 span.blue{
 	color: #5f9fab;
 }
 
 a.addtocart{
-	width: 76px;
+	width: 120px;
 	height: 27px;
 	display: block;
+	border-radius:10px;
 	float: left;
-	background: url(../images/addtocart.gif) no-repeat left;
+	background: url(../images/addtocart.gif)  left;
 	padding: 0 0 0 33px;
 	text-decoration: none;
 	line-height: 27px;
 	color: #1c4a52;
 }
 
-a.compare{
+a.back{
 	width: 76px;
 	height: 27px;
 	display: block;
 	float: left;
-	background: url(../images/compare.gif) no-repeat left;
+	background: url(../images/back.gif) no-repeat left;
 	padding: 0 0 0 33px;
 	text-decoration: none;
 	line-height: 27px;

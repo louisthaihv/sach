@@ -1,7 +1,8 @@
 /* CSS Document */
-*{
+*{	
 	margin:0px;
 	padding:0px;
+	text-decoration: none;
 	}
 .clr{
 	clear:both;
@@ -19,8 +20,8 @@ body{
 /*==========================TOP==========*/
 .top{
 	width:1000px;
-	height:125px;
-	background:url(../images/banner.jpg);
+	height:40px;
+	background-color:#066;
 	}
 	
 .languages{
@@ -41,20 +42,22 @@ body{
 	}
 
 .search{
-	width:370px;
+	width:500px;
 	height:32px;
-	float: right;
-	background:url(../images/top_search_bg.gif) no-repeat center;
-	margin-right:20px;
+	float:right;
+	background:url(../images/search.png) repeat-x center;
+	margin-right:200px;
+	margin-top:4px;
+	border-radius:5px;
 	}
 .search-text{
 	padding:8px 0 0 15px;
 	float:left;
 	width:110px;
-	color:#999;
+	color:#099;
 	}
 .search-text a{
-	color:#999;
+	color:#099;
 	text-decoration:none;
 	}
 .search-input{
@@ -66,7 +69,22 @@ body{
 	border-bottom-color:#FFF;
 	border-top-color:#FFF;
 	}
+.search-select{
+	width:100px;
+	height:18px;
+	margin:5px 5px 0 0;
+	border:1px solid #CCC;
+	float:left;
+	border-bottom-color:#FFF;
+	border-top-color:#FFF;
+	}
 .search-bt{
 	float:left;
 	padding:2px 0 0 15px;
 	}
+.sm {
+    width: 35px;
+    height: 31px;
+    background: url(../images/search.gif) no-repeat center;
+    border: none;
+}
