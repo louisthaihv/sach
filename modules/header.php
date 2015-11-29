@@ -1,4 +1,8 @@
-
+<?php 
+  $sql = "SELECT * FROM tbl_product ORDER BY pd_view DESC LIMIT 10";
+  $products = mysql_query($sql);
+  $num_rows = mysql_num_rows($products);
+?>
 <div class="header">
       	<div id="logo"><img src="images/bookstore.png" alt="image"/></div>
         <div class="slider" >
@@ -16,12 +20,18 @@
                 </div>
                 <div class="clr"></div>
             	<div class="pagination">
-                <span class="current">1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                </div>
+             <?php 
+                for($i = 1; $i<10; $i++) {
+              ?>
+                <span 
+                <?php if($i ==1){
+                  echo "class='current'";
+                }?>
+                ><?=$i; ?></span>
+              <?php 
+                }
+              ?>
+              </div>
             
             </div>-->
             <div class="slide-holder">
@@ -31,12 +41,13 @@
               </div>
               <div class="slide-container">
                   <div class="slide-stage">
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
-                      <div class="slide-image"><a href="http://w3ateam.com"><img src="images/naruto%201.jpg"/></a></div>
+                  <?php 
+                    while ($dong = mysql_fetch_array($products)) {
+                  ?>
+                      <div class="slide-image"><a href="index.php?ac=product&cat_id=<?php echo $dong['cat_id'] ?>&pd_id=<?php echo $dong['pd_id'] ?>"><img src="images/<?php echo $dong['pd_image'] ?>"/></a></div>
+                  <?php 
+                    }
+                  ?>
                   </div>
               </div>
           </div>            

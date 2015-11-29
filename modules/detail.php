@@ -1,7 +1,13 @@
 <?php
 	$sql = "SELECT * FROM tbl_product WHERE pd_id = '$_GET[pd_id]'";
 	$product = mysql_query($sql);
-	$dong = mysql_fetch_array($product);
+    $num_rows = mysql_num_rows($product);
+    $dong = mysql_fetch_array($product);
+    $view = $dong['pd_view'] + 1;
+    if($num_rows  == 1){
+        $sql_update = "UPDATE tbl_product SET pd_view = ".$view. " WHERE pd_id = $_GET[pd_id]";
+        mysql_query($sql_update);
+    }
 ?>
 <div class="center_content">
   <div class="prod_box_big">
@@ -41,7 +47,8 @@
                 
           </div>
         	<div class="clr"></div><br /> 
-            <div class="description"> <?php echo $dong['pd_description']; ?></div>  
+            <div class="description"> <?php echo $dong['pd_description']; 
+            ?></div>  
         </div>
          
         <div class="bottom_prod_box_big"></div>
