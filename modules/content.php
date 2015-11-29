@@ -96,22 +96,28 @@
                   </div>
                </div>
             </div>
-            
-         	
-           <?php /*?> <div class="title-box">Manufactor</div>
-           	<ul class="left-menu">
-            	<li class="od"><a href="#">Kim Đồng</a></li>
-                <li class="od"><a href="#">abc book</a></li>
-                <li class="od"><a href="#">alphabook</a></li>
-                <li class="od"><a href="#">first new</a></li>
-            </ul>
-         
-         
-            <div class="banner-adds">
-             <a href="#"><img src="images/banner%202.png" alt="quang cao" /></a>
-             </div>
-         <?php */?>
          
          </div>
-       
+        <div>
+          <br>
+          <div class="fb-share-button" data-href="<?php 
+            echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        ?>" data-layout="button_count">
+          </div>
+          <br>
+          <div class="fb-like" data-layout="button_count"></div>
+          <div class="g-plus" data-action="share"></div>
+        </div>
       </div>
+    <?php 
+
+      if($_GET['ac'] == "product")
+      {
+    ?>
+  <div class="fb-comments" data-href="<?php 
+            echo 'http://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        ?>" data-numposts="5">
+  </div>
+  <?php 
+    }
+  ?>
