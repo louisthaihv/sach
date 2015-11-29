@@ -10,8 +10,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Trang người quản trị hệ thống</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css" media="screen">
+			.required{
+				color:red;
+			}
+		</style>
 	</head>
-	<script src="js/jquery.min.js" type="text/javascript"></script>
+
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/confirm.js"></script>
 	<body>
 	

@@ -8,9 +8,9 @@
 			<td height="37" colspan="4"><div align="center" style="color:#CC0033"><strong>CHỨC NĂNG THÊM DANH MỤC</strong></div></td>
 		  </tr>
 		  <tr>
-			<td width="141" height="40"><strong>Tên danh mục: </strong></td>
+			<td width="141" height="40"><strong>Tên danh mục: </strong>(<span class="required">*</span>)</td>
 			<td>
-				<input name="tendanhmuc" type="text" value="" >
+				<input name="tendanhmuc" type="text" value="" required>
 			</td>
 			<td height="40">&nbsp;</td>
 			<td>&nbsp;</td>
